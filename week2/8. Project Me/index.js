@@ -19,3 +19,31 @@ pushBtn.addEventListener("click", function(){
         renderEmojis()
     }
 })
+
+const remBtn = document.getElementById("rem-btn")
+remBtn.addEventListener("click", function(){
+    const emojiOutput = document.getElementById("emoji-output")
+    if (emojiOutput.value){
+        myEmojis.pop(emojiOutput.value)
+        renderEmojis()
+    }
+})
+
+
+const remBtn2 = document.getElementById("rem-btn2")
+remBtn2.addEventListener("click", function(){
+    const emojiOutput2 = document.getElementById("emoji-output2")
+    if (emojiOutput2.value){
+        myEmojis.shift(emojiOutput2.value)
+        renderEmojis()
+    }
+})
+
+const pushBtn2 = document.getElementById("push-btn2")
+pushBtn2.addEventListener("click", function(){
+    const emojiInput2 = document.getElementById("emoji-input2")
+    if (emojiInput2.value){
+        myEmojis.unshift(emojiInput2.value)
+        renderEmojis()
+    }
+})
